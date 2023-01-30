@@ -1,6 +1,6 @@
 .Navbar{
   width: 100%vh;
-  background-color: #69009f;
+  background-color: #7400b0;
   height: 15vh;
   display: flex;
   align-items: flex-end;
@@ -20,7 +20,7 @@
   border-radius: 10px;
 }
 .navlink:hover{
-  background-color: #69009f;
+  background-color: #7400b0;
   color: #fff;
 }
 .Navbar nav{
@@ -93,28 +93,25 @@ margin-left: 100px;
 .sidebar{
   height: 90vh;
   width: 15vw;
-  /* margin-left: 20px; */
-  /* margin-top: 10px; */
-  /* border-top: 1px solid grey; */
   border-right: 1px solid grey;
-  display: flex;
-
 }
 .mini-sidebar{
   background-color:#d9d9d9;
-  height:25vh;
-  width: 15vw;
-  align-self: flex-end;
-  text-align: center;
+  height:25%;
+  width: 100%;
+  right: 10px;
   padding-top: 20px;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* justify-self: center; */
+}
+.main-sidebar{
+
+  padding-top: 20px;
+  height: 60%;
+  /* align-self: flex-start; */
+  width: 100%;
 }
 .btn{
   color: #fff;
-  background-color: #69009f;
+  background-color: #7400b0;
   border: none;
   padding: 5px;
   border-radius: 20px;
@@ -122,7 +119,7 @@ margin-left: 100px;
 
 .icon{
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 .icon-text{
   display: flex;
@@ -135,10 +132,18 @@ margin-left: 100px;
   margin-left: 20px;
 }
 .icon-text:hover{
-  color: #69009f;
+  color: #fff;
+  border: 1px solid grey;
+  width: 70%;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #7400b0;
 }
-/* .btn-wrap{
-  border: 1px solid red;
-  padding-top: 20px;
-  height: fit-content;
-} */
+.dash-btn{
+  color: grey;
+  border: 1px solid grey;
+  width: 70%;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #fff;
+}
