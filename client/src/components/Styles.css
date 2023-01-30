@@ -1,10 +1,11 @@
 .Navbar{
   width: 100%vh;
-  background-color: dodgerblue;
+  background-color: #69009f;
   height: 15vh;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  padding-right: 20px;
 
 }
 
@@ -14,8 +15,13 @@
   margin: 5px;
   text-decoration: none;
   margin-top: 50px;
-  background-color: #fff;
-  color: #000;
+  /* background-color: #fff; */
+  color: #fff;
+  border-radius: 10px;
+}
+.navlink:hover{
+  background-color: #69009f;
+  color: #fff;
 }
 .Navbar nav{
   margin-bottom: 20px;
@@ -84,14 +90,55 @@
 margin-left: 100px;
 }
 
-/* .pie{
+.sidebar{
+  height: 90vh;
+  width: 15vw;
+  /* margin-left: 20px; */
+  /* margin-top: 10px; */
+  /* border-top: 1px solid grey; */
+  border-right: 1px solid grey;
+  display: flex;
 
-  border: 1px solid #060b26;
- display: flex;
- align-items: center;
- justify-content: center;
- padding-left: 10px;
- border-radius: 10px;
- background-color: #fff;
- 
+}
+.mini-sidebar{
+  background-color:#d9d9d9;
+  height:25vh;
+  width: 15vw;
+  align-self: flex-end;
+  text-align: center;
+  padding-top: 20px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* justify-self: center; */
+}
+.btn{
+  color: #fff;
+  background-color: #69009f;
+  border: none;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.icon{
+  margin-right: 10px;
+  font-size: 20px;
+}
+.icon-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: grey;
+  margin-top: 20px;
+  width: 50%;
+  margin-left: 20px;
+}
+.icon-text:hover{
+  color: #69009f;
+}
+/* .btn-wrap{
+  border: 1px solid red;
+  padding-top: 20px;
+  height: fit-content;
 } */

@@ -1,12 +1,12 @@
 import React from 'react'
-import Colorchart from './Colorchart'
-import Barchart from './Barchart'
-import Piechart from './Piecharts'
-import Respiechart from './Respiechart'
-import Linegraph from './Linegraph'
-import Newbargraph from './Newbargraph'
-import NewPieChart from './NewPieChart'
-import ActivePieChart from './ActivePieChart'
+import Colorchart from './Analytics/Colorchart'
+import Barchart  from './Analytics/Barchart'
+import Piechart from './Analytics/Piecharts'
+import Respiechart from './Analytics/Respiechart'
+import Linegraph from './Analytics/Linegraph'
+import Newbargraph from './Analytics/Newbargraph'
+import NewPieChart from './Analytics/NewPieChart'
+import ActivePieChart from './Analytics/ActivePieChart'
 
 function Home() {
   return (
@@ -23,7 +23,6 @@ function Home() {
       </div> */}
       <Barchart/>
       <Piechart/>
-      <Respiechart/>
       <Linegraph/>
       <Newbargraph/>
       <div className="new-chart">
