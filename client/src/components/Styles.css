@@ -120,16 +120,21 @@ margin-left: 100px;
 .icon{
   margin-right: 10px;
   font-size: 25px;
+  /* border: 1px solid blue; */
 }
 .icon-text{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   cursor: pointer;
   color: grey;
   margin-top: 20px;
-  width: 50%;
+  /* width: 50%; */
   margin-left: 20px;
+  width: 70%;
+  /* border: 1px solid red; */
+  padding-left: 0px;
+  
 }
 .icon-text:hover{
   color: #fff;
