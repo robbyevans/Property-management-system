@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import Landingpage from './components/LandingPage/Landingpage';
 import Home from './components/Home';
 import Login from "./components/Authentication/Login";
 import Signup from "./components/Authentication/Signup";
 import Footer from "./components/Footer"
+import Sidebar from "./components/Navbar/Sidebar";
+import Analytics from "./components/Pages/Analytics";
+import Dashboard from "./components/Pages/Dashboard";
+import Marketing from "./components/Pages/Marketing";
+import Tenants from "./components/Pages/Tenants";
+import ProductList from "./components/Pages/ProductList";
 import './App.css';
 
 function App() {
@@ -27,12 +32,18 @@ function App() {
     <>
     <Router>
       <Navbar user={user} setUser={setUser}/>
+      <Sidebar user={user} setUser={setUser}/>
 
-      {user?(
-
-      <Routes>
-        <Route path="/" exact element={<Landingpage  user={user} setUser={setUser}/>}></Route>
-        <Route path="/Analytics" element={<Home user={user}/>}></Route>
+      {user?
+      
+      (
+        <Routes>
+        <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/marketing" element={<Marketing />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/productList" element={<ProductList/>} />
+        <Route path="/Analytics" element={<Home user={user}/>} />
       </Routes>
       ):(
       <Routes>
@@ -40,11 +51,14 @@ function App() {
         </Route>
         <Route path="/Signup" element={<Signup setUser={setUser}/>}>
         </Route>
-        <Route path="*" element={<h1>404 NOT FOUND</h1>}>
-        </Route>
+        {/* <Route path="*" element={<h1>404 NOT FOUND</h1>}>
+        </Route> */}
       </Routes>
 
-      )}
+      )
+      
+      
+      }
       
       <Footer/>
     </Router>

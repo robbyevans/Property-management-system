@@ -10,7 +10,7 @@ import ActivePieChart from './Analytics/ActivePieChart'
 
 function Home() {
   return (
-    <div>
+    <div className='home'>
       <h1>Analytics</h1>
       <div className='piechart-wrap'>
         <Colorchart/>

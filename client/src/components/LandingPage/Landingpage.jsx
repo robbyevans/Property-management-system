@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from '../Navbar/Sidebar'
 
 function Landingpage({setUser}) {
 
@@ -9,7 +8,6 @@ function Landingpage({setUser}) {
     <>
     <div className='Landing-page'>
       <div>
-        <Sidebar setUser={setUser}/>
         
       </div>
     </div>

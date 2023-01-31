@@ -1,12 +1,51 @@
-import React from 'react'
+import React,{useState} from 'react'
+import {NavLink} from "react-router-dom"
 import { BiLogOut, BiBuildingHouse } from "react-icons/bi";
 import { MdOutlineSettings,MdAttachMoney } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 import { BsPeople } from "react-icons/bs";
+import { FaThList,FaBars } from 'react-icons/fa';
 
 
-function Sidebar({setUser}) {
+const Sidebar = ({ children,user,setUser})=> {
+  const[isOpen,setIsOpen]=useState(false);
+  const toggle=()=>setIsOpen(!isOpen);
+
+  const menuItem=[
+    {
+        path:"/",
+        name:"Dashboard",
+        icon:<RxDashboard/>
+    },
+    {
+        path:"/rentals",
+        name:"Rental-Units",
+        icon:<BiBuildingHouse/>
+    },
+    {
+        path:"/tenants",
+        name:"Tenants",
+        icon:<BsPeople/>
+    },
+    {
+        path:"/marketing",
+        name:"Marketing",
+        icon:<HiOutlineSpeakerphone/>
+    },
+    {
+        path:"/finances",
+        name:"Finances",
+        icon:<MdAttachMoney/>
+    },
+    {
+        path:"/productList",
+        name:"Product List",
+        icon:<FaThList/>
+    }
+]
+
+
   function handleLogoutClick(){
     fetch("/logout",{method: "DELETE"}).then((r)=>{
       if(r.ok){
@@ -15,35 +54,26 @@ function Sidebar({setUser}) {
     });
   }
   return (
-    <div className='sidebar'>
-        <div className='main-sidebar'>
-        <div  className="icon-text dash-btn">
-            <RxDashboard className='icon'/> <a className=' ' > Dashboard</a>
-          </div>
-          <div  className="icon-text ">
-            <BiBuildingHouse className='icon'/> <a className=' ' > Rental Units</a>
-          </div>
-          <div  className="icon-text ">
-            <BsPeople className='icon'/> <a className=' ' >Tenants</a>
-          </div>
-          <div  className="icon-text ">
-            <HiOutlineSpeakerphone className='icon'/> <a className=' ' > Marketing</a>
-          </div>
-          <div  className="icon-text ">
-            <MdAttachMoney className='icon'/> <a className=' ' >Finances</a>
-          </div>
-        </div>
-
-          <div className='mini-sidebar'>
-          <div onClick={handleLogoutClick} className="icon-text ">
-            <MdOutlineSettings className='icon'/> <a className=' ' > Settings</a>
-          </div>
-          <div onClick={handleLogoutClick} className="icon-text ">
-            <BiLogOut className='icon'/> <a className=' ' > Logout</a>
-          </div>
-          </div>
-        </div>
-  )
+    <div className="container">
+       <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
+           <div className="top_section">
+               <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
+               <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
+                   <FaBars onClick={toggle}/>
+               </div>
+           </div>
+           {
+               menuItem.map((item, index)=>(
+                   <NavLink to={item.path} key={index} className="link" activeclassName="active">
+                       <div className="icon">{item.icon}</div>
+                       <div style={{display: isOpen ? "block" : "none"}} className="link_text">{item.name}</div>
+                   </NavLink>
+               ))
+           }
+       </div>
+       <main>{children}</main>
+    </div>
+);
 }
 
 export default Sidebar
