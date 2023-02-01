@@ -12,6 +12,14 @@ const Sidebar = ({ children,user,setUser})=> {
   const[isOpen,setIsOpen]=useState(false);
   const toggle=()=>setIsOpen(!isOpen);
 
+  function handleLogout(){
+    fetch("/logout",{method: "DELETE"}).then((r)=>{
+      if(r.ok){
+        setUser(null);
+      }
+    });
+  }
+
   const menuItem=[
     {
         path:"/",
@@ -29,18 +37,18 @@ const Sidebar = ({ children,user,setUser})=> {
         icon:<BsPeople/>
     },
     {
-        path:"/marketing",
-        name:"Marketing",
-        icon:<HiOutlineSpeakerphone/>
-    },
-    {
         path:"/finances",
         name:"Finances",
         icon:<MdAttachMoney/>
     },
     {
-        path:"/productList",
-        name:"Product List",
+        path:"/marketing",
+        name:"Marketing",
+        icon:<HiOutlineSpeakerphone/>
+    },
+    {
+        path:"/statements",
+        name:"Statements",
         icon:<FaThList/>
     }
 ]
@@ -54,6 +62,8 @@ const Sidebar = ({ children,user,setUser})=> {
     });
   }
   return (
+    <>
+    {user?(
     <div className="container">
        <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
            <div className="top_section">
@@ -70,9 +80,26 @@ const Sidebar = ({ children,user,setUser})=> {
                    </NavLink>
                ))
            }
+           <div style={{width: isOpen ? "220px" : "70px"}} className='mini-sidebar' >
+
+                     <div className="link-end">
+                       <div className="icon"><MdOutlineSettings/></div>
+                       <div style={{display: isOpen ? "block" : "none"}} className="link_text">Settings</div>
+                    </div>
+
+                    <div className="link-end"  onClick={handleLogout}>
+                       <div className="icon"><BiLogOut/></div>
+                       <div style={{display: isOpen ? "block" : "none"}} className="link_text">Logout</div>
+                    </div>
+        
+           </div>
        </div>
        <main>{children}</main>
     </div>
+    ):(
+        null
+    )}
+    </>
 );
 }
 

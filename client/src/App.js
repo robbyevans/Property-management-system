@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home';
 import Login from "./components/Authentication/Login";
 import Signup from "./components/Authentication/Signup";
 import Footer from "./components/Footer"
@@ -11,6 +10,8 @@ import Dashboard from "./components/Pages/Dashboard";
 import Marketing from "./components/Pages/Marketing";
 import Tenants from "./components/Pages/Tenants";
 import ProductList from "./components/Pages/ProductList";
+import Finances from "./components/Pages/Finances"
+import Rentals from "./components/Pages/Rentals";
 import './App.css';
 
 function App() {
@@ -39,11 +40,13 @@ function App() {
       (
         <Routes>
         <Route path="/" element={<Dashboard />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/finances" element={<Finances />} />
+          <Route path="/rentals" element={<Rentals />} />
+          
           <Route path="/marketing" element={<Marketing />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/productList" element={<ProductList/>} />
-        <Route path="/Analytics" element={<Home user={user}/>} />
+        <Route path="/tenants" element={<Tenants/>} />
       </Routes>
       ):(
       <Routes>

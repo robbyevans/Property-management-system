@@ -144,6 +144,9 @@ main{
   width: 220px;
   transition: all 0.5s;
   border: 1px solid grey;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: none;
 }
 .top_section{
   display: flex;
@@ -161,12 +164,15 @@ main{
 .link{
   display: flex;
   color: grey;
-  padding: 10px 15px;
-  gap: 15px;
+  padding: 5px 15px;
+  gap: 10px;
   transition: all 0.5s;
   border-radius: 20px;
   margin-top: 10px;
-  /* width: 80%; */
+  /* width: 70%; */
+  /* border: 1px solid grey; */
+  /* padding-left:-10px;
+  padding-right:-20px; */
 
 }
 .link:hover{
@@ -184,4 +190,21 @@ main{
 }
 .icon{
   font-size: 20px;
+}
+.mini-sidebar{
+  margin-top: 50px;
+
+ 
+}
+.link-end{
+  display: flex;
+  color: grey;
+  padding: 5px 15px;
+  gap: 10px;
+  transition: all 0.5s;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.link-end:hover{
+  color: #7400b0;
 }
