@@ -1,11 +1,15 @@
 import React from 'react'
 import Card from '../Card'
+import PercentageCard from '../PercentageCard'
 
 function Dashboard() {
   return (
     <div className='dashboard'>Dashboard
        <h1>Dashboard</h1>
-       <Card/>
+       <div className="dashboard-top">
+         <Card/>
+         <PercentageCard/>
+       </div>
     </div>
    
   )

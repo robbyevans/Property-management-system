@@ -222,7 +222,7 @@ main{
 }
 .card{
   /* position: absolute; */
-  width: 215px;
+  width: 205px;
   height: 150px;
   background: #fff;
   box-shadow: 20px 20px 40px -12px rgba(0, 0, 0, 0.25);
@@ -282,4 +282,27 @@ line-height: 16px;
 }
 .card span{
   margin-right: 5px;
+}
+.percentage-card{
+  width: 205px;
+  height: 250px;
+  background: #fff;
+  box-shadow: 20px 20px 40px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  margin: 10px;
+  color: #6e7a94;
+  margin-top: 25px;
+  margin-left: 55px;
+  border: 1px solid grey;
+}
+.dashboard-top{
+  display: flex;
+  border: 1px solid blueviolet;
+  flex-wrap: wrap;
+
+}
+.percentage-card .title{
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid green;
 }
