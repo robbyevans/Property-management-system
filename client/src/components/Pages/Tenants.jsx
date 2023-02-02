@@ -2,7 +2,9 @@ import React from 'react'
 
 function Tenants() {
   return (
-    <div>Tenants</div>
+    <div>
+      <h1>Tenants</h1>
+    </div>
   )
 }
 

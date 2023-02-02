@@ -54,13 +54,6 @@ const Sidebar = ({ children,user,setUser})=> {
 ]
 
 
-  function handleLogoutClick(){
-    fetch("/logout",{method: "DELETE"}).then((r)=>{
-      if(r.ok){
-        setUser(null);
-      }
-    });
-  }
   return (
     <>
     {user?(
@@ -95,10 +88,10 @@ const Sidebar = ({ children,user,setUser})=> {
            </div>
        </div>
        <main>{children}</main>
-    </div>
-    ):(
-        null
-    )}
+       </div>
+       ):(
+         null
+         )}
     </>
 );
 }

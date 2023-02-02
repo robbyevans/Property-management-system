@@ -2,7 +2,9 @@ import React from 'react'
 
 function Rentals() {
   return (
-    <div>Rentals</div>
+    <div>
+      <h1>Rentals</h1>
+    </div>
   )
 }
 

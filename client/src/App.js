@@ -32,8 +32,18 @@ function App() {
   return (
     <>
     <Router>
+      
       <Navbar user={user} setUser={setUser}/>
-      <Sidebar user={user} setUser={setUser}/>
+        <Routes>
+          <Route path="/Login" element={<Login setUser={setUser}/>}>
+          </Route>
+          <Route path="/Signup" element={<Signup setUser={setUser}/>}>
+          </Route>
+          {/* <Route path="*" element={<h1>404 NOT FOUND</h1>}>
+          </Route> */}
+        </Routes>
+
+      <Sidebar user={user} setUser={setUser}>
 
       {user?
       
@@ -49,19 +59,14 @@ function App() {
         <Route path="/tenants" element={<Tenants/>} />
       </Routes>
       ):(
-      <Routes>
-        <Route path="/Login" element={<Login setUser={setUser}/>}>
-        </Route>
-        <Route path="/Signup" element={<Signup setUser={setUser}/>}>
-        </Route>
-        {/* <Route path="*" element={<h1>404 NOT FOUND</h1>}>
-        </Route> */}
-      </Routes>
+      null
 
       )
       
       
       }
+      </Sidebar>
+      
       
       <Footer/>
     </Router>

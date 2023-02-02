@@ -132,6 +132,7 @@ margin-left: 100px;
 }
 .container{
   display:flex;
+  /* position: fixed; */
 }
 main{
   width: 100%;
@@ -147,6 +148,7 @@ main{
   padding-left: 10px;
   padding-right: 10px;
   border-top: none;
+
 }
 .top_section{
   display: flex;

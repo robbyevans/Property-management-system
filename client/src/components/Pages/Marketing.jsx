@@ -2,7 +2,9 @@ import React from 'react'
 
 function Marketing() {
   return (
-    <div>Marketing</div>
+    <div>
+      <h1>Marketing</h1>
+    </div>
   )
 }
 
