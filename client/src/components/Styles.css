@@ -148,7 +148,6 @@ main{
   padding-left: 10px;
   padding-right: 10px;
   border-top: none;
-
 }
 .top_section{
   display: flex;
@@ -171,10 +170,6 @@ main{
   transition: all 0.5s;
   border-radius: 20px;
   margin-top: 10px;
-  /* width: 70%; */
-  /* border: 1px solid grey; */
-  /* padding-left:-10px;
-  padding-right:-20px; */
 
 }
 .link:hover{
@@ -209,4 +204,82 @@ main{
 }
 .link-end:hover{
   color: #7400b0;
+}
+.dashboard{
+  border: 1px solid red;
+  height: 200vh;
+  width: 100%;
+}
+.card-wrap{
+  border: 1px solid red;
+  padding: 20px;
+  /* position: absolute; */
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+.card{
+  /* position: absolute; */
+  width: 215px;
+  height: 150px;
+  background: #fff;
+  box-shadow: 20px 20px 40px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  margin: 10px;
+  color: #6e7a94;
+}
+.card h3{
+  /* position: absolute; */
+width: 90px;
+height: 24px;
+margin-left: 25px;
+margin-top: 20px;
+/* 
+font-family: 'DM Sans'; */
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+letter-spacing: -0.02em;
+
+}
+.card h1{
+
+/* position: absolute; */
+width: 135px;
+height: 24px;
+margin-left: 25px;
+margin-top: 36px;
+/* 
+font-family: 'DM Sans'; */
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 24px;
+/* identical to box height, or 86% */
+}
+.card p{
+  /* position: absolute; */
+width: 122px;
+height: 16px;
+margin-left: 25px;
+margin-top: 20px;
+
+/* font-family: 'DM Sans'; */
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height */
+
+}
+.card-main{
+  background-color: #7400b0;
+  color: #fff;
+}
+.card span{
+  margin-right: 5px;
 }

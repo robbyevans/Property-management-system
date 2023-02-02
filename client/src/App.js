@@ -32,7 +32,7 @@ function App() {
   return (
     <>
     <Router>
-      
+
       <Navbar user={user} setUser={setUser}/>
         <Routes>
           <Route path="/Login" element={<Login setUser={setUser}/>}>
@@ -49,10 +49,10 @@ function App() {
       
       (
         <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route  path="/" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/finances" element={<Finances />} />
           <Route path="/rentals" element={<Rentals />} />
-          
           <Route path="/marketing" element={<Marketing />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/productList" element={<ProductList/>} />
