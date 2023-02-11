@@ -65,20 +65,17 @@
 
 .piechart{
   border: 1px solid red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.new-chart{
+/* .new-chart{
   display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 500px;
-}
-.new-primary-chart{
+} */
+/* .new-primary-chart{
 margin-left: 100px;
-}
+} */
 
 .btn{
   color: #fff;
@@ -206,7 +203,7 @@ main{
   color: #7400b0;
 }
 .dashboard{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 200vh;
   width: 100%;
 }

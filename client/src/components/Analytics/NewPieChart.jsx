@@ -14,23 +14,35 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 export default function NewPieChart(){
  
     return (
-      <PieChart width={800} height={400} className="new-primary-chart" >
-        <Pie
-          data={data}
-          cx={120}
-          cy={200}
+      <div>
+        <PieChart width={200} height={200} className="piechart" >
+        
+            <Pie
+              data={data}
+              cx={100}
+              cy={90}
+              innerRadius={40}
+              outerRadius={60}
+              fill="#8884d8"
+              paddingAngle={0}
+              dataKey="value"
+            >
 
-          innerRadius={50}
-          outerRadius={100}
-          fill="#8884d8"
-          paddingAngle={0}
-          dataKey="value"
-        >
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-          ))}
-        </Pie>
-        <Tooltip/>
-      </PieChart>
+
+              {data.map((entry, index) => (
+                <Cell
+                
+                
+                key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+            </Pie>
+               <text x={105} y={95} dy={8} textAnchor="middle" fill="#000">
+               % paid
+              </text>
+            <Tooltip/>
+        
+        </PieChart>
+                {/* <p>hello</p> */}
+      </div>
     );
 }
