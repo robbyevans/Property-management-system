@@ -19,11 +19,11 @@ function Dashboard() {
        <div className="maindash">
          <div className="dash-top">
            <Card/>
-          <NewPieChart/>
+           <Updates/>
          </div>
          <div className='dash-mid'>
           <Linegraph/>
-           <Updates/>
+          <NewPieChart/>
 
          </div>
          <div className='dash-body'>

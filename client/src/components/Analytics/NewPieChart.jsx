@@ -15,12 +15,12 @@ export default function NewPieChart(){
  
     return (
       <div className='newpiechart'>
-        <PieChart width={200} height={200} className="piechart" >
+        <PieChart width={150} height={150} className="piechart" >
         
             <Pie
               data={data}
-              cx={100}
-              cy={90}
+              cx={70}
+              cy={70}
               innerRadius={40}
               outerRadius={60}
               fill="#8884d8"
@@ -36,7 +36,7 @@ export default function NewPieChart(){
                 key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
             </Pie>
-               <text x={105} y={95} dy={8} textAnchor="middle" fill="#000">
+               <text x={70} y={75} dy={8} textAnchor="middle" fill="#000">
                % paid
               </text>
             <Tooltip/>
