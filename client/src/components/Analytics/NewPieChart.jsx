@@ -14,7 +14,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 export default function NewPieChart(){
  
     return (
-      <div>
+      <div className='newpiechart'>
         <PieChart width={200} height={200} className="piechart" >
         
             <Pie

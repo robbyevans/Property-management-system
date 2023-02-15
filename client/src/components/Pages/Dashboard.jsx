@@ -9,27 +9,32 @@ import Newbargraph from '../Analytics/Linegraph'
 import NewPieChart from '../Analytics/NewPieChart'
 import Piecharts from '../Analytics/Piecharts'
 import Respiechart from '../Analytics/Respiechart'
+import Updates from '../Updates/Updates'
 import Table from '../Table/Table'
 
 function Dashboard() {
   return (
     <div className='dashboard'>Dashboard
        <h1>Dashboard</h1>
-       <div className="dashboard-top">
-         <Card/>
-         
-         {/* <PercentageCard/> */}
-       </div>
-       <div className='dashbody'>
-        <Table/>
-        <ActivePieChart/>
-        {/* <Barchart/> */}
-        {/* <Colorchart/> */}
-        {/* <Linegraph/> */}
-        {/* <Newbargraph/> */}
-        <NewPieChart/>
-        {/* <Piecharts/> */}
-        {/* <Respiechart/> */}
+       <div className="maindash">
+         <div className="dash-top">
+           <Card/>
+          <NewPieChart/>
+         </div>
+         <div className='dash-mid'>
+          <Linegraph/>
+           <Updates/>
+
+         </div>
+         <div className='dash-body'>
+          <Table/>
+          {/* <ActivePieChart/> */}
+          {/* <Barchart/> */}
+          {/* <Colorchart/> */}
+          {/* <Newbargraph/> */}
+          {/* <Piecharts/> */}
+          {/* <Respiechart/> */}
+         </div>
        </div>
 
     </div>

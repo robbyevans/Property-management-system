@@ -65,17 +65,19 @@
 
 .piechart{
   border: 1px solid red;
-}
 
-/* .new-chart{
+}
+.newpiechart{
+  border: 1px solid green;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  padding-left: 500px;
-} */
-/* .new-primary-chart{
-margin-left: 100px;
-} */
+  width: 20%;
+  margin-right: 5px;
+  border-radius: 0.7rem;
+ 
+
+}
 
 .btn{
   color: #fff;
@@ -203,15 +205,11 @@ main{
   color: #7400b0;
 }
 .dashboard{
-  /* border: 1px solid red; */
-  height: 200vh;
   width: 100%;
 }
 .card-wrap{
   border: 1px solid red;
   padding: 20px;
-  /* position: absolute; */
-  margin-left: 10px;
   display: flex;
   align-items: center;
   width: fit-content;
@@ -292,14 +290,30 @@ line-height: 16px;
   margin-left: 55px;
   border: 1px solid grey;
 }
-.dashboard-top{
-  display: flex;
+.dash-top{
   border: 1px solid blueviolet;
-  flex-wrap: wrap;
-
+  display: flex;
+  flex-direction: row;
+}
+.dash-mid{
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: row; 
+  margin-top: 25px;
+  
 }
 .percentage-card .title{
   margin-top: 10px;
   text-align: center;
   border: 1px solid green;
+}
+.maindash{
+  /* border: 1px solid pink; */
+}
+@media screen and (max-width: 768px) {
+  .dash-top{
+    /* border: 1px solid blueviolet; */
+    display: flex;
+    flex-direction: column;
+  }
 }
